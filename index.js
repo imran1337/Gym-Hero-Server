@@ -42,6 +42,10 @@ const verifyToken = async (userToken) => {
   }
 };
 
+app.get("/", (req, res) => {
+  res.send("Something Went Wrong");
+});
+
 client.connect((err) => {
   const userCollection = client.db("gymClub").collection("user");
   const messageCollection = client.db("gymClub").collection("messages");
@@ -748,10 +752,6 @@ client.connect((err) => {
   });
   // make admin end
   console.log("I am connected Boss");
-});
-
-app.get("/", (req, res) => {
-  res.send("Something Went Wrong");
 });
 
 app.listen(port, () => {
