@@ -757,19 +757,3 @@ client.connect((err) => {
 app.listen(port, () => {
   console.log("Hello Boss, I am running Now");
 });
-
-/***
- * cartResult.map(async (cartId) => {
-          const id = cartId.serviceId;
-          const sss = await servicesCollection.find({ _id: ObjectID(id) });
-          const ids = await sss.toArray((serviceErr, serviceResult) => {
-            if (serviceErr !== null) {
-              return res.status(500).send("something went wrong");
-            }
-            // console.log(serviceResult);
-            // res.send(serviceResult)
-            return serviceResult;
-          });
-          console.log(ids);
-        });
- */
